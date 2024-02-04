@@ -19,6 +19,7 @@ public class AutoBike {
         return speed;
     }
     public void getGears() {
+
         int gearRange = 4;
         for (currentGear = 1; currentGear <= gearRange; currentGear++) {
             if (currentGear == 1) {
