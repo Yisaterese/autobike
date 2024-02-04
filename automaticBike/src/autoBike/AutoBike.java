@@ -12,7 +12,6 @@ public class AutoBike {
     public void toggleSwitch() {
         isOn = !isOn;
     }
-
     public void accelerate() {
        speed++;
     }
