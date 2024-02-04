@@ -27,7 +27,6 @@ public class AutoBike {
                 speed++;
             } else if (currentGear == 2) {
                 speed += 2;
-
             } else if (currentGear == 3) {
                 speed += 3;
             } else if (currentGear == 4) {
