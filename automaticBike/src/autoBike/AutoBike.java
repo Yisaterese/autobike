@@ -7,6 +7,7 @@ public class AutoBike {
 
     public boolean isOn() {
         return isOn;
+
     }
     public void toggleSwitch() {
         isOn = !isOn;
