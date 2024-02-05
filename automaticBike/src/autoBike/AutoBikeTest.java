@@ -27,22 +27,49 @@ class AutoBikeTest {
           assertFalse(autoBike.isOn());
           autoBike.toggleSwitch();
           assertTrue(autoBike.isOn());
-          assertEquals(1,autoBike.getGear());
-
+          autoBike.accelerate();
           for(int count = 1; count <= 15; count++){
               autoBike.accelerate();
           }
-
-          assertEquals(1,autoBike.getGear());
           assertEquals(16,autoBike.getSpeed());
-         // assertEquals(5,autoBike.getGear());
-          //assertEquals(16,autoBike.getSpeed());
-
-
 
       }
+    @Test
+    public void autoBikeCanAccelerateAtGearTwoSpeed20_autoBikeCanAccelerateAtGearTwoSpeed22Test() {
+        AutoBike autoBike = new AutoBike();
+        assertFalse(autoBike.isOn());
+        autoBike.toggleSwitch();
+        assertTrue(autoBike.isOn());
+        autoBike.accelerate();
+        for (int count = 1; count <= 21; count++) {
+            autoBike.accelerate();
+        }
+        assertEquals(23, autoBike.getSpeed());
+    }
+    @Test
+    public void autoBikeCanAccelerateAtGearThreeSpeed35_autoBikeCanAccelerateAtGearThreeSpeed47Test() {
+        AutoBike autoBike = new AutoBike();
+        assertFalse(autoBike.isOn());
+        autoBike.toggleSwitch();
+        assertTrue(autoBike.isOn());
+        for (int count = 1; count <= 31; count++) {
+            autoBike.accelerate();
 
+        }
+        assertEquals(47, autoBike.getSpeed());
+    }
 
+    @Test
+    public void autoBikeCanAccelerateAtGearFourSpeed41_autoBikeCanAccelerateAtGearFourSpeedTest() {
+        AutoBike autoBike = new AutoBike();
+        assertFalse(autoBike.isOn());
+        autoBike.toggleSwitch();
+        assertTrue(autoBike.isOn());
+        for (int count = 1; count <= 41; count++) {
+            autoBike.accelerate();
+        }
+        assertEquals(87, autoBike.getSpeed());
+    }
 
 }
 

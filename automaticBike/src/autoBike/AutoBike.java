@@ -19,14 +19,15 @@ public class AutoBike {
     public void setGear(){
        if (speed >= 0 && speed <= 20) {
            currentGear = 1;
+       } else if (speed >= 21 && speed <=30) {
+           currentGear = 2;
+       }else if (speed  >= 31 && speed <= 40){
+           currentGear = 3;
+       }else if (speed >= 41){
+           currentGear = 4;
+       }else{
+
        }
-
-           /*  = speed >= 21 && speed <=30;
-
-            speed >= 31 && speed <= 40;
-              speed >= 41;*/
-
-
     }
     public int getGear(){
         return currentGear;
@@ -42,7 +43,6 @@ public class AutoBike {
             } else if (currentGear == 4) {
                 speed += 4;
             }
-
             setGear();
 
     }
