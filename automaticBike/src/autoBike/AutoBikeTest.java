@@ -20,7 +20,6 @@ class AutoBikeTest {
         assertFalse(autoBike.isOn());
     }
 
-
       @Test
     public void autoBikeCanAccelerateAtGearOneSpeed15_autoBikeCanAccelerateAtGearOneSpeed16Test() {
           AutoBike autoBike = new AutoBike();
