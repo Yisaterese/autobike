@@ -27,9 +27,11 @@ class AutoBikeTest {
           assertFalse(autoBike.isOn());
           autoBike.toggleSwitch();
           assertTrue(autoBike.isOn());
+
           autoBike.accelerate();
           assertEquals(1,autoBike.getSpeed());
-
+          autoBike.getGears();
+          assertEquals(,autoBike.getSpeed());
           }
       }
 

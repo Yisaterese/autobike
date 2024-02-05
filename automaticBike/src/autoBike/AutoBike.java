@@ -18,7 +18,21 @@ public class AutoBike {
     public int getSpeed(){
         return speed;
     }
-    public void getGears() {
+
+    public void setGear(){
+        switch (currentGear) {
+            case 1:
+                boolean gearOne  = speed >= 0 && speed <= 20;
+            case 2:
+                boolean gearTwo = speed >= 21 && speed <=30;
+            case 3:
+                boolean gearThree = speed >= 31 && speed <= 40;
+            case 4:
+                boolean gearFour = speed >= 41;
+        }
+
+    }
+    public void getGear() {
 
         int gearRange = 4;
         for (currentGear = 1; currentGear <= gearRange; currentGear++) {
