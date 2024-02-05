@@ -58,6 +58,7 @@ class AutoBikeTest {
         }
         assertEquals(47, autoBike.getSpeed());
     }
+
     @Test
     public void autoBikeCanAccelerateAtGearFourSpeed41_autoBikeCanAccelerateAtGearFourSpeedTest() {
         AutoBike autoBike = new AutoBike();
