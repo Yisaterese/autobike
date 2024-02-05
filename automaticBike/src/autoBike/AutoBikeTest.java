@@ -60,7 +60,7 @@ class AutoBikeTest {
     }
 
     @Test
-    public void autoBikeCanAccelerateAtGearFourSpeed41_autoBikeCanAccelerateAtGearFourSpeedTest() {
+    public void autoBikeCanAccelerateAtGearFourSpeed41_autoBikeCanAccelerateAtGearFourSpeed87Test() {
         AutoBike autoBike = new AutoBike();
         assertFalse(autoBike.isOn());
         autoBike.toggleSwitch();
