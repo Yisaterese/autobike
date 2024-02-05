@@ -88,7 +88,7 @@ class AutoBikeTest {
     }
 
     @Test
-    public void autoBikeCanDecelerateAtGearTwoSpeed23_autoBikeCanDecelerateAtGearTwoSpeed21Test() {
+    public void autoBikeCanDecelerateAtGearThreeSpeed47_autoBikeCanDecelerateAtGearThreeSpeed43Test() {
         AutoBike autoBike = new AutoBike();
         assertFalse(autoBike.isOn());
         autoBike.toggleSwitch();
@@ -103,6 +103,21 @@ class AutoBikeTest {
 
     }
 
+    @Test
+    public void autoBikeCanDecelerateAtGearFourSpeed87_autoBikeCanDecelerateAtGearFourSpeed83Test() {
+        AutoBike autoBike = new AutoBike();
+        assertFalse(autoBike.isOn());
+        autoBike.toggleSwitch();
+        assertTrue(autoBike.isOn());
+        for(int count = 1; count <= 41; count++){
+            autoBike.accelerate();
+        }
+        assertEquals(87,autoBike.getSpeed());
+
+        autoBike.decelerate();
+        assertEquals(83, autoBike.getSpeed());
+
+    }
 
 
 }
