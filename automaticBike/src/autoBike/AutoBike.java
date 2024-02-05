@@ -2,7 +2,7 @@ package autoBike;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 public class AutoBike {
     private boolean isOn;
-    private int currentGear;
+    private int currentGear = 1;
     private int speed;
 
     public boolean isOn() {
@@ -17,24 +17,22 @@ public class AutoBike {
         return speed;
     }
     public void setGear(){
-        switch (currentGear) {
-            case 1:
-                boolean gearOne  = speed >= 0 && speed <= 20;
-            case 2:
-                boolean gearTwo = speed >= 21 && speed <=30;
-            case 3:
-                boolean gearThree = speed >= 31 && speed <= 40;
-            case 4:
-                boolean gearFour = speed >= 41;
-        }
+       if (speed >= 0 && speed <= 20) {
+           currentGear = 1;
+       }
+
+           /*  = speed >= 21 && speed <=30;
+
+            speed >= 31 && speed <= 40;
+              speed >= 41;*/
+
 
     }
     public int getGear(){
         return currentGear;
     }
     public void accelerate() {
-        int gearRange = 4;
-        for (currentGear = 1; currentGear <= gearRange; currentGear++) {
+
             if (currentGear == 1) {
                 speed++;
             } else if (currentGear == 2) {
@@ -44,18 +42,8 @@ public class AutoBike {
             } else if (currentGear == 4) {
                 speed += 4;
             }
-        }
-        // return speed();
-//    }
-//  public void decelerate(){
-//    accelerate--;
-//
-//}
-//
-//
-//    public int speed(){
-//        speed++;
-//        return speed;
-//    }
+
+            setGear();
+
     }
 }

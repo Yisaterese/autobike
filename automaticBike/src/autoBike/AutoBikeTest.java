@@ -22,29 +22,29 @@ class AutoBikeTest {
 
 
       @Test
-    public void autoBikeCanAccelerate_autoBikeCanAccelerateTest() {
+    public void autoBikeCanAccelerateAtGearOneSpeed15_autoBikeCanAccelerateAtGearOneSpeed16Test() {
           AutoBike autoBike = new AutoBike();
           assertFalse(autoBike.isOn());
           autoBike.toggleSwitch();
           assertTrue(autoBike.isOn());
+          assertEquals(1,autoBike.getGear());
 
-          autoBike.accelerate();
-          assertEquals(1,autoBike.getSpeed());
-          autoBike.getGears();
-          assertEquals(,autoBike.getSpeed());
+          for(int count = 1; count <= 15; count++){
+              autoBike.accelerate();
           }
+
+          assertEquals(1,autoBike.getGear());
+          assertEquals(16,autoBike.getSpeed());
+         // assertEquals(5,autoBike.getGear());
+          //assertEquals(16,autoBike.getSpeed());
+
+
+
       }
 
 
-//   @Test
-//    public void autoBikeCanDeccelerate_autoBikeCanDeccelerateTest(){
-//        AutoBike autoBike = new AutoBike();
-//        assertFalse(autoBike.isOn());
-//        autoBike.toggleSwitch();
-//        assertTrue(autoBike.isOn());
-//        autoBike.accelerate();
-//        assertEquals(2, autoBike.accelerate());
-//        autoBike.deccelerate();
-//        assertEquals(0,autoBike.deccelerate());
-//    }
+
+}
+
+
 
