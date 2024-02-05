@@ -30,7 +30,6 @@ public class AutoBike {
             case 4:
                 boolean gearFour = speed >= 41;
         }
-
     }
     public void getGear() {
 
