@@ -45,4 +45,18 @@ public class AutoBike {
             }
             setGear();
     }
+
+    public void decelerate() {
+
+        if (currentGear == 1) {
+            speed--;
+        } else if (currentGear == 2) {
+            speed -= 2;
+        } else if (currentGear == 3) {
+            speed -= 3;
+        } else if (currentGear == 4) {
+            speed -= 4;
+        }
+        setGear();
+    }
 }

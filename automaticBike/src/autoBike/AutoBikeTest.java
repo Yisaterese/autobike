@@ -70,6 +70,23 @@ class AutoBikeTest {
         assertEquals(87, autoBike.getSpeed());
     }
 
+    @Test
+    public void autoBikeCanDecelerateAtGearOneSpeed16_autoBikeCanDecelerateAtGearOneSpeed15Test() {
+        AutoBike autoBike = new AutoBike();
+        assertFalse(autoBike.isOn());
+        autoBike.toggleSwitch();
+        assertTrue(autoBike.isOn());
+        autoBike.accelerate();
+        for(int count = 1; count <= 15; count++){
+            autoBike.accelerate();
+        }
+        assertEquals(16,autoBike.getSpeed());
+
+        autoBike.decelerate();
+        assertEquals(15, autoBike.getSpeed());
+
+    }
+
 }
 
 
