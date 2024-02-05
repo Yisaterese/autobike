@@ -12,13 +12,10 @@ public class AutoBike {
     public void toggleSwitch() {
         isOn = !isOn;
     }
-    public void accelerate() {
-       speed++;
-    }
+
     public int getSpeed(){
         return speed;
     }
-
     public void setGear(){
         switch (currentGear) {
             case 1:
@@ -30,9 +27,12 @@ public class AutoBike {
             case 4:
                 boolean gearFour = speed >= 41;
         }
-    }
-    public void getGear() {
 
+    }
+    public int getGear(){
+        return currentGear;
+    }
+    public void accelerate() {
         int gearRange = 4;
         for (currentGear = 1; currentGear <= gearRange; currentGear++) {
             if (currentGear == 1) {
