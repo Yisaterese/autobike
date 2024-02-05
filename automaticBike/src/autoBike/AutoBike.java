@@ -44,6 +44,5 @@ public class AutoBike {
                 speed += 4;
             }
             setGear();
-
     }
 }
